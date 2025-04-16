@@ -75,6 +75,18 @@ pip install iminuit==2.11.0
 
 Note Windows 11 users may need to relax tensorflow-io-gcs-filesystem to require no version
 
+As fifth option:
+
+conda env create -f DeepSPT_simple.yml 
+conda activate DeepSPT
+
+#   1) pin setuptools to a version that still carries msvccompiler
+python -m pip install "setuptools<65" --no-cache-dir
+
+#   2) build/install normally
+python -m pip install --no-cache-dir "probfit==1.2.0"
+
+Note Windows 11 users may need to relax tensorflow-io-gcs-filesystem to require no version
 
 ```
 DeepSPT modules and additional/helpful functions are contained in the `deepspt_src` folder.
